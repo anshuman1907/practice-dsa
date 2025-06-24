@@ -27,5 +27,6 @@ class Sll:
             temp.next=n
         else:
             self.start=n
+            
         
     
