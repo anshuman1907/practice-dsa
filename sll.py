@@ -20,5 +20,12 @@ class Sll:
         
     def insert_at_last(self,data):
         n= Node(data)
-        if not self.is_empty
+        if not self.is_empty():
+            temp = self.start
+            while temp.next is not None:
+                temp.next=None
+            temp.next=n
+        else:
+            self.start=n
+        
     
