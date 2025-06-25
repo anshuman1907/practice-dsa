@@ -17,6 +17,7 @@ class Sll:
     def insert_at_start(self,data):
             
         n= Node(data,self.start)
+ 
         self.start=n
         
     def insert_at_last(self,data):
@@ -102,11 +103,11 @@ class Sllitrator:
         
         
 mylist= Sll()
-# mylist.insert_at_start(200)  
-# mylist.insert_at_start(100)  
-# mylist.insert_at_start(50)  
-# mylist.insert_at_last(267)  
-# mylist.insert_after(mylist.search(200),34)
+mylist.insert_at_start(200)  
+mylist.insert_at_start(100)  
+mylist.insert_at_start(50)  
+mylist.insert_at_last(267)  
+mylist.insert_after(mylist.search(200),34)
 mylist.print_list()
 
 mylist.delet_item(50)

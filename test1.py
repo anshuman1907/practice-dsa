@@ -1,23 +1,30 @@
 z= 5
 
-def deco1(f):
-    def inner(*a, **k):
-        print("deco1")
-        return f(*a, **k)
-    return inner
 
-def deco2(f):
-    def inner(*a, **k):
-        print("deco2")
-        return f(*a, **k)
-    return inner
 
-@deco1
-@deco2
-def say():
-    print("say")
 
-say()
+
+
+
+
+# def deco1(f):
+#     def inner(*a, **k):
+#         print("deco1")
+#         return f(*a, **k)
+#     return inner
+
+# def deco2(f):
+#     def inner(*a, **k):
+#         print("deco2")
+#         return f(*a, **k)
+#     return inner
+
+# @deco1
+# @deco2
+# def say():
+#     print("say")
+
+# say()
 
 
 # class A:
@@ -83,7 +90,7 @@ say()
 # print(eval(str(a)))
 
 # print("Top level")
-
+  
 # class A:
 #     print("Inside A")
 #     print("Inside A")
