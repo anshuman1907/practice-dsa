@@ -1,3 +1,5 @@
+x = 1
+
 class Node:
     def __init__(self,item= None, next=None):
         self.item= item
@@ -7,7 +9,6 @@ class Node:
 class Sll:
     def __init__(self,start=None):
         self.start= start
-        
         
     def is_empty(self):
         return self.start== None
@@ -100,11 +101,11 @@ class Sllitrator:
         
         
 mylist= Sll()
-mylist.insert_at_start(200)  
-mylist.insert_at_start(100)  
-mylist.insert_at_start(50)  
-mylist.insert_at_last(267)  
-mylist.insert_after(mylist.search(200),34)
+# mylist.insert_at_start(200)  
+# mylist.insert_at_start(100)  
+# mylist.insert_at_start(50)  
+# mylist.insert_at_last(267)  
+# mylist.insert_after(mylist.search(200),34)
 mylist.print_list()
 
 mylist.delet_item(50)
