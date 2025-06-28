@@ -12,10 +12,3 @@ class CSLL:
     def is_empty(self):
         return self.tail is None
     
-
-    def insert_start(self,data):
-        n= Node(data)
-
-        if not self.is_empty():
-            n.next=self.tail.next 
-            
