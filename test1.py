@@ -1,10 +1,39 @@
-z= 5
+class Node():
+    def __init__(self,prev= None, val=None,next=None):
+        self.prev= prev
+        self.val= val
+        self.next= next
+
+
+class Node():
+    def __init__(self,head = None):
+          self.head= head
+
+    def at_start(self,data):
+        temp= Node(data)
+        l1= self.head
+        l2= self.head.next
+
+    
+        if self.head is not None:
+            temp.next = l2
+            temp.prev = l1
+            l1.next = temp
+            l2.prev = temp
+
+        else:
+            self.head = temp
+            temp.next= temp
+            temp.prev= temp
 
 
 
-
-
-
+    def insert_after(self,data):
+        curr= self.head
+        l1= self.head
+        l2= self.head.next
+        
+        count = 0
 
 
 # def deco1(f):
