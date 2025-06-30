@@ -31,6 +31,11 @@ class Stack():
 s1= Stack()
 s1.pus(10)
 s1.pus(20)
+s1.pus(50)
+s1.pus(40)
+s1.pus(30)
+
+print(s1.size_of())
 
 print("top element",s1.peek())
 print("removed element",s1.pop())
