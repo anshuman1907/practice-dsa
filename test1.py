@@ -5,323 +5,111 @@ class Node():
         self.next= next
 
 
-class Node():
+class Dll():
     def __init__(self,head = None):
           self.head= head
 
     def at_start(self,data):
         temp= Node(data)
-        l1= self.head
-        l2= self.head.next
+        
 
     
         if self.head is not None:
-            temp.next = l2
-            temp.prev = l1
-            l1.next = temp
-            l2.prev = temp
+            l1= self.head
+           
+            temp.next = l1
+            
+            l1.prev = temp
+            l1= temp
+            
+            
 
         else:
             self.head = temp
-            temp.next= temp
-            temp.prev= temp
+          
 
 
-
-    def insert_after(self,data):
-        curr= self.head
-        l1= self.head
-        l2= self.head.next
-        
-        count = 0
-
-
-# def deco1(f):
-#     def inner(*a, **k):
-#         print("deco1")
-#         return f(*a, **k)
-#     return inner
-
-# def deco2(f):
-#     def inner(*a, **k):
-#         print("deco2")
-#         return f(*a, **k)
-#     return inner
-
-# @deco1
-# @deco2
-# def say():
-#     print("say")
-
-# say()
-
-
-# class A:
-#     lst = []
-
-#     def __init__(self):
-#         self.lst.append(len(self.lst))
-
-# print(A().lst)
-# print(A().lst)
-# print(A().lst)
-
-
-
-
-# class A:
-#     def __enter__(self):
-#         print("enter")
-#         return self
-
-#     def __exit__(self, *a):
-#         print("exit")
-
-# with A() as a:
-#     print("inside")
-
-# class A:
-#     def __bool__(self):
-#         return False
-
-# if A():
-#     print("yes")
-# else:
-#     print("no")
-
-
-# def deco(f):
-#     def wrapper(*a, **k): return f(*a, **k)
-#     return wrapper
-
-# @deco
-# class A:
-#     pass
-
-# print(type(A))
-
-# class D:
-#     def __get__(self, obj, objtype):
-#         return lambda: 99
-
-# class A:
-#     x = D()
-
-# print(A().x())
-
-
-
-# class A:
-#     def __str__(self):
-#         return "eval('1+2')"
-
-# a = A()
-# print(eval(str(a)))
-
-# print("Top level")
   
-# class A:
-#     print("Inside A")
-#     print("Inside A")
 
+    def insert_after(self, data):
+        curr = self.head
 
-# print("After class A")
+        count = 0
+        while curr:
+            count += 1
+            curr = curr.next
 
-# class A:
-#     def m1(self): print("A")
+        midnodeindex = count // 2
+        curr = self.head
+        for i in range(midnodeindex):
+            curr = curr.next
+        l1 = curr
+        l2 = curr.next
+        temp = Node(val=data)
+        temp.next = l2
 
-# class B(A):
-   
-#     def m(self): print("B")
+        temp.prev = l1
+        l1.next= temp
+        l2.prev= temp
 
-# class C(A):
-#     def m(self): print("C")
 
-# class D(B, C): pass
+    def at_end(self,data):
 
-# D().m()
+        temp= Node(data)
+        l1= self.head
+        
+        while l1.next:
+            l1= l1.next
 
+          
+        l1.next= temp
+        temp.prev = l1
 
-# class A:
-#     def __getattr__(self, name):
-#         return name.upper()
 
-# a = A()
-# print(a.hello)
 
+#####################################
 
+class Node():
+    def __init__(self,val= None,next=None):
+        self.val= val
+        self.next= next
 
-# class A:
-#     funcs = []
+class Sll():
+    def __init__(self,head= None):
+        self.head = head
 
-#     for i in range(3):
-#         def f(): return i
-#         funcs.append(f)
+    def at_start(self,data):
+        temp = Node(data)
+        l1= self.head
+          
+        temp.next = l1
+        l1= temp
+            
+            
+    def at_end(self,data):
+        temp= Node(data)
+        l1=self.head
+        while l1.next:
+            l1= l1.next
 
-# print([f() for f in A.funcs])
+        l1.next= temp
 
 
-# class Meta(type):
-#     def __new__(cls, name, bases, dct):
-#         print("Meta creating", name)
-#         return super().__new__(cls, name, bases, dct)
+    def at_mid(self,data):
+        curr=self.head
+        count= 0
+        while curr:
+            count+=1
+            curr=curr.next
 
-# class A(metaclass=Meta):
-#     def __init__(self):
-#         print("Init A")
+        midnodeindex= count//2
 
-# a = A()
+        curr= self.head
 
-# class A:
-#     def __new__(cls):
-#         print("A.__new__")
-#         return super().__new__(cls)
+        for _ in range(midnodeindex):
+            curr= curr.next
 
-#     def __init__(self):
-#         print("A.__init__")
-
-# A()
-
-
-
-# x = 1
-# class A:
-#     print(x)
-#     x = 4
-#     print(x)
-
-# print(x)
-
-
-
-# class A:
-#     def __init__(self):
-#         print("A", end=' ')
-
-# class B(A):
-#     def __init__(self):
-#         print("B", end=' ')
-#         super().__init__()
-
-# class C(B, A):
-#     pass
-
-# C()
-
-
-# class A:
-#     def show(self):
-#         print("A")
-
-# class B(A):
-#     def show(self):
-#         print("B")
-#         super().show()
-
-# class C(B):
-#     def show(self):
-#         print("C")
-#         super().show()
-
-# C().show()
-
-
-# class A:
-#     def __init__(self):
-#         self._x = 0
-
-#     @property
-#     def x(self):
-#         return self._x
-
-#     @x.setter
-#     def x(self, val):
-#         self._x += val
-
-# a = A()
-# a.x = 5
-# print(a.x)
-
-
-# def func(): return "outside"
-
-# class A:
-#     func = func
-
-#     def call(self):
-#         return self.func()
-
-# print(A().call())
-
-
-# class A:
-#     items = []
-
-#     def __init__(self, val):
-#         self.items.append(val)
-
-# A(1)
-# A(2)
-# print(A.items)
-
-
-
-# class A:
-#     def greet(self):
-#         print("A")
-
-# class B(A):
-#     def greet(lf):
-
-#         print("B")
-
-# class C(A):
-#     pass
-
-# class D(B, C):
-#     pass
-
-# D().greet()
-
-
-# def append_to(val, lst=[]):
-#     lst.append(val)
-#     return lst
-
-# print(append_to(1))
-# print(append_to(2))
-
-
-# funcs = []
-# for i in range(3):
-#     def f():
-#         return i
-#     funcs.append(f)
-
-# print([f() for f in funcs])
-
-
-
-
-# class A:
-#     def method(self):
-#         print("instance")
-
-#     @staticmethod
-#     def method():
-#         print("static")
-
-# A().method()
-
-
-
-
-# class A:
-#     x = 1
-
-#     def __init__(self):
-#         self.x = 2
-
-# a = A()
-# print(a.x)
-# print(A.x)
+        temp = Node(data)
+        # l1= self.curr
+        temp.next =curr.next
+        curr.next= temp
