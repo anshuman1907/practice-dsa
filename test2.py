@@ -81,6 +81,8 @@ s.at_start(222)
 
 s.print1()
 
+
+
 s.inser_before(4 ,2)
 
 
