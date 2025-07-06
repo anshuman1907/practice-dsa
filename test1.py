@@ -178,6 +178,8 @@ class Sll():
         temp.next = l2
 
         # step 3:
+
+        
         if l1:
             l1.next = temp
 
