@@ -71,6 +71,7 @@ class Dll:
             pass
         elif self.start.next is  None:
             self.start= None
+            
         else:
             temp = self.start
             while temp.next is not None:
