@@ -43,6 +43,7 @@ class CSLL:
     def inser_after(self,data):
         temp = Node(data)
         if not self.is_empty():
+            
             self.start.next = temp.next
             temp.next= temp
 
