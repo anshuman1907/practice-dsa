@@ -14,7 +14,7 @@ class MinStack:
         self.s.append(val)
         if self.mins:
            
-            # bascallyu dono value ko caompre kiye then minimum ko add kr diya
+            # bascallyu dono value ko compare kiye then minimum ko add kr diya
             val =min(val, self.mins[-1])
 
         self.mins.append(val)
