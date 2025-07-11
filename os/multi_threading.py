@@ -31,6 +31,11 @@ def download_file(name):
     # print(f"done {name} downloaded.\n")
 
 
+
+
+
+
+
 t1 = threading.Thread(target=download_file, args=("file1",))
 t2 = threading.Thread(target=download_file, args=("file2",))
 # t3 = threading.Thread(target=download_file, args=("file3",))
