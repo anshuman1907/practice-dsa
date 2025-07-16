@@ -1,0 +1,6 @@
+/* Write your T-SQL query statement below */
+
+select person.firstName, person.lastName,address.city,address.state
+from person
+full join address on person.personID =address.personID
+where person.firstName is not null
