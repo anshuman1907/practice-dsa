@@ -1,0 +1,113 @@
+### Set 1 ###
+
+Q1. Check if a number is even or odd:
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Number is even")
+else:
+    print("Number is odd")
+
+Q2. Print last item from a tuple:
+t = (10, 20, 30, 40)
+print(t[-1])
+
+Q3. Reverse a string using slicing:
+text = 'anshuman'
+print(text[::-1])
+
+Q4. Find maximum in a sorted list:
+list1 = [1, 3, 5, 6, 7, 8, 3, 5, 55, 6, 1]
+a = sorted(list1)
+print(a[-1])
+
+Q5. Sum all elements in a list:
+list1 = [1,2,0,2,4]
+sum1 = 0
+for i in list1:
+    sum1 += i
+print(sum1)
+
+
+### Set 2 ###
+
+Q1. Remove duplicates using set:
+list1 = [1,2,0,2,4]
+a = set(list1)
+print(list(a))
+
+Q2. Function to greet user by name:
+def greet(name):
+    print(f"Hello, {name}!")
+
+Q3. Loop through list:
+l = [1,2,3]
+for i in l:
+    print(i)
+
+
+### Set 3 ###
+
+Q1. Print numbers greater than 50 from the list:
+nums = [22, 55, 67, 33, 90, 12, 77]
+for i in nums:
+    if i > 50:
+        print(i)
+
+Q2. Count how many words are in this sentence:
+sentence = 'Python is a powerful and popular language'
+word = sentence.split()
+print(len(word))
+
+Q3. Count how many even numbers are in the tuple:
+t = (1, 4, 7, 10, 13, 16, 19)
+sum1 = 0
+for i in t:
+    if i % 2 == 0:
+        sum1 += 1
+print(sum1)
+
+Q4. Print keys from dictionary where value > 30:
+scores = {'A': 25, 'B': 35, 'C': 50, 'D': 10}
+for key, value in scores.items():
+    if value > 30:
+        print(key)
+
+Q5. Return the largest number from list using a function:
+def find_largest(lst):
+    lst.sort()
+    return lst[-1]
+
+Q5 (Alt). Return largest number without sort:
+def find_largest(lst):
+    count = lst[0]
+    for i in lst:
+        if i > count:
+            count = i
+    return count
+
+
+### Set 4 ###
+
+Q1. Print all unique even numbers from list using set:
+nums = [1, 2, 2, 4, 5, 6, 6, 8, 9]
+s = set(nums)
+for i in s:
+    if i % 2 == 0:
+        print(i)
+
+Q2. Reverse each word in a string without changing word order:
+sentence = 'I love Python'
+sentence = "I love Python"
+word = sentence.split()
+l = []
+for i in word:
+    l.append(i[::-1])
+print(" ".join(l))
+
+Q3. Find average of numbers in tuple:
+t = (10, 20, 30, 40, 50)
+t = (10, 20, 30, 40, 50)
+avg = sum(t) / len(t)
+print(avg)
+
+
