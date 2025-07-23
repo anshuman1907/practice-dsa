@@ -1,0 +1,3 @@
+fastapi
+redis>=5.0.0
+uvicorn
