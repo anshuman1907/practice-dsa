@@ -1,0 +1,100 @@
+
+Anshuman’s Python Coding Practice – 23 July 2025
+
+Q1. List: Replace All Even Numbers with Zero
+nums = [5, 8, 13, 6, 11, 2]
+l = []
+for i in nums:
+    if i % 2 == 0:
+        i = 0
+    l.append(i)
+print(l)
+# Output: [5, 0, 13, 0, 11, 0]
+
+Q2. Dict: Filter by Value
+marks = {"Ansh": 47, "Neha": 80, "Ravi": 67, "Meena": 91}
+for key, val in marks.items():
+    if val < 70:
+        print(key)
+# Output: Ansh, Ravi
+
+Q3. Set: Remove Duplicates from List
+nums = [2, 4, 2, 8, 6, 4, 10, 2]
+l = []
+for i in nums:
+    if i not in l:
+        l.append(i)
+print(l)
+# Output: [2, 4, 8, 6, 10]
+
+Q5. String: Count Uppercase Letters
+text = "Anshuman Loves Python"
+count = 0
+for i in text:
+    if i.isupper():
+        count += 1
+print(count)
+# Output: 3
+
+Q6. Function: Check Prime
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+# Example: print(is_prime(11)) # True
+
+Q7. List: Reverse Odd Numbers
+nums = [4, 11, 7, 2, 9, 8]
+l = []
+for i in nums:
+    if i % 2 != 0:
+        l.append(i)
+print(l[::-1])
+# Output: [9, 7, 11]
+
+Q8. Dict: Value Update
+data = {"x": 100, "y": 200, "z": 300}
+for key, val in data.items():
+    data[key] = data[key] + 50
+print(data)
+# Output: {'x': 150, 'y': 250, 'z': 350}
+
+Q9. Set: Find Difference
+a = {2, 4, 6, 8}
+b = {4, 8, 10}
+print(a.difference(b))
+# Output: {2, 6}
+
+Q10. Tuple: Index of Maximum Value
+t = (14, 22, 5, 38, 9)
+print(t.index(max(t)))
+# Output: 3
+
+Q13. List of Dicts: Find Topper
+students = [
+    {"name": "Ansh", "marks": 77},
+    {"name": "Neha", "marks": 92},
+    {"name": "Ravi", "marks": 68}
+]
+s = ""
+max_m = 0
+for i in students:
+    if i["marks"] > max_m:
+        max_m = i["marks"]
+        s = i["name"]
+print(s)
+# Output: Neha
+
+Q14. String: Palindrome Check
+s = "madam"
+if s == s[::-1]:
+    print("yes")
+else:
+    print("no")
+# Output: yes
+
+---
+File auto-generated for Anshuman by ChatGPT on 23 July 2025.
