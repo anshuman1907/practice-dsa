@@ -4,7 +4,7 @@ create a venv using
 
 activate venv
 
-`source venv_temp/bin/activate`
+``
 
 install required packages
 

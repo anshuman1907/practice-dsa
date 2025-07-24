@@ -18,6 +18,7 @@ def dasdasdajsgdja():
 def generic_function():
     return PlainTextResponse("This is a generic function.")
 
+
 @app.get("/second")
 def read_root():
     return generic_function()
