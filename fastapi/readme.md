@@ -4,7 +4,7 @@ create a venv using
 
 activate venv
 
-``
+`source venv_temp/bin/activate`
 
 install required packages
 
@@ -17,3 +17,5 @@ freeze package version into file
 
 
 run server
+
+pip instal jinja2  >#for template 
