@@ -17,16 +17,16 @@ template_obj = Jinja2Templates(directory="templates")
 #     return templates.TemplateResponse(
 #         request=request, name="index.html", context={'data': data_obj}
 #     )
-def tem2():
-    l=[]
-    for i in range(11):
-        l.append(i)
-    return l
+# def tem2():
+#     l=[]
+#     for i in range(11):
+#         l.append(i)
+#     return l
 
 @app.get("/")
-def read(request:Request):
+def read1s(request:Request):
     # normal key and val; formate in con
-    context= {"header_item":request.headers,"request": request}
+    context = {"header_items": request.headers, "request": request, }
     return template_obj.TemplateResponse("index.html", context=context)
 
 

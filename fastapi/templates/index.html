@@ -1,11 +1,36 @@
 <html>
+
 <head>
     <title>Item Details</title>
- <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
     {{data}}
 
+
+
 </head>
+
+
 <body>
-<h1>anshuman</h1>
+    <h1>anshuman</h1>
+
+
+
+    <table style="width:100%">
+        <h1>table </h1>
+        <tr>
+            <th>#</th>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+        {% for key, value in header_items.items() %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{key}}</td>
+            <td>{{value}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
 </body>
+
 </html>
