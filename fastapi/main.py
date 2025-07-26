@@ -30,6 +30,11 @@ def read1s(request:Request):
     return template_obj.TemplateResponse("index.html", context=context)
 
 
+@app.get("/sec")
+def re(request:Request):
+    context = { "request": request, }
+    return template_obj.TemplateResponse("test.html",context=context)
+
 
 
 if __name__ == "__main__":
