@@ -11,7 +11,6 @@ async def read_item(p_id:int, sort):
 
 
 
-
 @app.post("/products/{p_id}")
 async def read_item(p_id:int, sort):
     return [p_id, sort]
