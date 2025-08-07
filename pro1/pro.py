@@ -1,11 +1,12 @@
 from fastapi import FastAPI
+from database import get_collections
 
 app = FastAPI()
+student_collection = get_collections()
 
 @app.get("/")
 async def home():
-
-    return {"massage": "Hedsfloo anshuman"}
+    return list(student_collection.find({}, {"_id": 0}))
 
 
 
@@ -13,4 +14,4 @@ async def home():
 if __name__ == '__main__':
 
     import uvicorn
-    uvicorn.run('test:app', host="0.0.0.0", port=8000 ,reload= True)
+    uvicorn.run('pro:app', host="0.0.0.0", port=8000 ,reload= True)
