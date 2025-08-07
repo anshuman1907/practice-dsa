@@ -6,11 +6,13 @@ from pydantic import BaseModel
 app = FastAPI()
 student_collection = get_collections()
 
-
+# for dschema createng 
 class Student(BaseModel):
     name: str
     age: int
     grade: str
+    hight: float
+
 
 
 @app.get("/")
@@ -28,8 +30,21 @@ async def create(new:Student):
     except Exception as e:
         return HTTPException(status_code=500,detail=f"some error {e}")
 
+# @app.put("/students/{name}")
+# async def update_student(name: str, updated: Student):
+#     result = student_collection.update_one({"name": name}, {"$set": updated.dict()})
+#     if result.matched_count == 0:
+#         raise HTTPException(status_code=404, detail="Student not found")
+#     return {"msg": "Student updated"}
 
 
+
+@app.delete("/students/{name}")
+async def delete_student(name: str):
+    result = student_collection.delete_one({"name": name})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="student not foundd")
+    return {"msg": "student delleted"}
 
 if __name__ == '__main__':
 
