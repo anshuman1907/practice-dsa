@@ -4,4 +4,4 @@ app =FastAPI()
 
 @app.get("/")
 async def home():
-    return{"massage": "Hello anshu"}
+    return{"massage": "Hello"}
