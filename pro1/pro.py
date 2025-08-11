@@ -41,7 +41,6 @@ async def update_student(name: str, updated: Student):
     return {"msg": "Student updateed successfully"}
 
 
-
 @app.delete("/students/{name}")
 async def delete_student(name: str):
     result = student_collection.delete_one({"name": name})
