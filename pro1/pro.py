@@ -29,6 +29,8 @@ async def create(new:Student):
     
     except Exception as e:
         return HTTPException(status_code=500,detail=f"some error {e}")
+    
+
 @app.put("/students/{name}")
 async def update_student(name: str, updated: Student):
     result = student_collection.update_one(
@@ -44,7 +46,7 @@ async def update_student(name: str, updated: Student):
 async def delete_student(name: str):
     result = student_collection.delete_one({"name": name})
     if result.deleted_count == 0:
-        raise HTTPException(status_code=404, detail="student not foundd")
+        raise HTTPException(status_code=404, detail="student noot foundd")
     return {"msg": "student delleted"}
 
 if __name__ == '__main__':
