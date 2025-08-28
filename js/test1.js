@@ -1,10 +1,10 @@
-var a = 12
+var a = 134;
 console.log(a)
 
 
 
 
-let a = 12
-console.log(a)
+let b = 12;
+console.log(b)
 
 
