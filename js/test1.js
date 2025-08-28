@@ -1,10 +1,22 @@
-var a = 134;
-console.log(a)
+var x= 134;
+// console.log(x)
+b()
+a()
+
+console.log(x)
 
 
 
+function a(){
+    var x= 10
 
-let b = 12;
-console.log(b)
+  console.log(x)
 
+}
 
+function b()
+{
+    var x= 50
+    console.log(x)
+}
+console.log(x)
