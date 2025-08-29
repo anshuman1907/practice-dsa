@@ -98,5 +98,4 @@ const out6 = arr2.reduce(function (max, curr) {
 console.log(out6)
 
 
-// using aroow function 
- 
+
