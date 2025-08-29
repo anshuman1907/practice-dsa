@@ -45,3 +45,9 @@ a()
 
 // first claas function 
 
+var b = function (param1){
+    return function xy(){
+
+    }
+}
+console.log(b())
