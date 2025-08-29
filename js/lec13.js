@@ -4,8 +4,8 @@ console.log("start")
 
 
 setTimeout(function cb(){
-    console.log("ca;; back")
-},500000)
+    console.log("call back")
+},0)
 
 console.log("end")
 
