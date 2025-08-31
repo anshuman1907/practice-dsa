@@ -8,7 +8,7 @@ if (a === undefined){
     console.log("a is undefind")
 }
 else {
-    console.log("a s definde")
+    console.log("a Is definde")
 }
 
 
