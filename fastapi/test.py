@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/as")
 async def home():
 
     return {"massage": "Hedsfloo anshuman"}
